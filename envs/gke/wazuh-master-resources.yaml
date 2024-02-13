@@ -17,10 +17,10 @@ spec:
         - name: wazuh-manager
           resources:
             requests:
-              cpu: 1
+              cpu: 1000m
               memory: 1Gi
             limits:
-              cpu: 2
+              cpu: 2000m
               memory: 2Gi
   volumeClaimTemplates:
     - metadata:
