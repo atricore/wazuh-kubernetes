@@ -21,7 +21,7 @@ spec:
               memory: 1Gi
             limits:
               cpu: 1000m
-              memory: 2Gi
+              memory: 1Gi
   volumeClaimTemplates:
     - metadata:
         name: wazuh-manager-worker
