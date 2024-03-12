@@ -13,6 +13,7 @@ resources:
 - https-loadbalancer.yaml
 - dashboard-backend-config.yaml
 - ingress-ssl-cert.yaml
+
 patches:
 - path: storage-class.yaml
 - path: indexer-autopilot.yaml
