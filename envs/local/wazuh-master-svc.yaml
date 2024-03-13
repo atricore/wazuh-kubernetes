@@ -10,11 +10,9 @@ spec:
     - name: agent
       port: 1514
       targetPort: 1514
-      nodePort: 31514
     - name: registration
       port: 1515
       targetPort: 1515
-      nodePort: 31515
     - name: api
       port: 55000
       targetPort: 55000
