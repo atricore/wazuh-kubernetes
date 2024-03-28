@@ -8,28 +8,28 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: wazuh-indexer
+  name: wazuh-manager-master
   namespace: wazuh
 spec:
   template:
     spec:
       containers:
-        - name: wazuh-indexer
+        - name: wazuh-manager
           resources:
             requests:
-              cpu: 1000m
-              memory: 2Gi
+              cpu: 500m
+              memory: 1Gi
             limits:
               cpu: 1000m
-              memory: 4Gi
+              memory: 1Gi
   volumeClaimTemplates:
     - metadata:
-        name: wazuh-indexer
-        namespace: indexer-cluster
+        name: wazuh-manager-master
+        namespace: wazuh
       spec:
         accessModes:
           - ReadWriteOnce
         storageClassName: wazuh-storage
         resources:
           requests:
-            storage: 75Gi
+            storage: 5Gi
