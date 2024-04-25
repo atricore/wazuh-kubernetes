@@ -19,10 +19,13 @@ spec:
           resources:
             requests:
               cpu: 500m
-              memory: 1Gi
+              memory: 1564Mi
             limits:
               cpu: 1000m
-              memory: 2Gi
+              memory: 1564Mi
+          env:
+            - name: OPENSEARCH_JAVA_OPTS
+              value: '-Xms1g -Xmx1g -Dlog4j2.formatMsgNoLookups=true'
   volumeClaimTemplates:
     - metadata:
         name: wazuh-indexer
